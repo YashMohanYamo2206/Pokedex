@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginBottom="20sp"
+    android:layout_width="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content">
+        <TextView
+            android:background="#000"
+            android:textSize="50sp"
+            android:fontFamily="@font/odin_rounded"
+            android:id="@+id/tv_location_name"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/stars"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="pokemon_type_name"/>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/pokeball"
+        android:layout_width="150sp"
+        android:layout_height="150sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20sp"
+        android:src="@mipmap/pokeball" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pokeball"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"
+        android:fontFamily="@font/odin_rounded"
+        android:text="pokémon"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="230sp"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/pokedex"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:background="@color/icPsychic"
+            android:onClick="pokedex"
+            android:text="pokedex"
+            android:textColor="@color/bgFire" />
+
+        <Button
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:background="@color/icPsychic"
+            android:onClick="types_of_pokemon"
+            android:text="types of pokemon"
+            android:textColor="@color/bgFire" />
+
+        <Button
+            android:id="@+id/location"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50sp"
+            android:layout_marginBottom="50sp"
+            android:background="@color/icPsychic"
+            android:onClick="location"
+            android:text="region wise pokemons"
+            android:textColor="@color/bgFire" />
+
+        <Button
+            android:id="@+id/items"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50sp"
+            android:background="@color/icPsychic"
+            android:onClick="items"
+            android:text="items"
+            android:textColor="@color/bgFire" />
+
+        <Button
+            android:id="@+id/not_region"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:background="@color/icPsychic"
+            android:onClick="locations_not_regions"
+            android:text="locations"
+            android:textColor="@color/bgFire" />
+    </LinearLayout>
+
+
+</RelativeLayout>

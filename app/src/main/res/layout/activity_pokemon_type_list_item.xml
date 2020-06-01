@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_marginBottom="20sp"
+    android:layout_width="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_height="wrap_content">
+    <LinearLayout
+        android:gravity="center"
+        android:layout_gravity="center"
+        android:background="#000"
+        android:layout_width="match_parent"
+        android:layout_height="100sp">
+        <ImageView
+            android:id="@+id/iv_pokemon_type"
+            android:src="@mipmap/ic_launcher_round"
+            android:layout_width="150sp"
+            android:layout_height="100sp"
+            android:contentDescription="TODO" />
+        <TextView
+            android:fontFamily="@font/odin_rounded"
+            android:id="@+id/tv_pokemon_types_name"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:textColor="@color/stars"
+            android:layout_width="150sp"
+            android:layout_height="50sp"
+            android:text="pokemon_type_name"/>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

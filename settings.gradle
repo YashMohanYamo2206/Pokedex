@@ -1,0 +1,2 @@
+rootProject.name='deltaTask3'
+include ':app'

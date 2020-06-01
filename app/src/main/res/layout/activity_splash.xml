@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".splash_screen"
+    android:id="@+id/splash_relativeLayout"
+    android:background="@color/primary"
+    android:fitsSystemWindows="false">
+
+    <ImageView
+        android:id="@+id/splash"
+        android:layout_width="270dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/pokeball"
+        android:contentDescription="TODO" />
+    <TextView
+        android:id="@+id/tv_app_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="140dp"
+        android:fontFamily="@font/odin_rounded"
+        android:text="#PokéDex"
+        android:textColor="@color/logo"
+        android:textSize="40sp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.yash.deltatask3">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/pokeball"
+        android:label="PokéDex"
+        android:roundIcon="@mipmap/pokeball"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".location_not_region" />
+        <activity android:name=".pokemon_details_activity" />
+        <activity android:name=".location_list" />
+        <activity android:name=".pokemon_types_list" />
+        <activity android:name=".splash_screen">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".pokemon_list" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".location_pokemon_list" />
+        <activity android:name=".pokemon_of_types_list" />
+        <activity android:name=".items_list" />
+        <activity android:name=".location_not_region_list" />
+    </application>
+
+</manifest>
