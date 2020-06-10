@@ -7,15 +7,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Callback;
 import com.squareup.picasso.Picasso;
 
 import java.util.Collections;
 import java.util.List;
-
 
 
 public class pokemon_list_adapter extends RecyclerView.Adapter<pokemon_list_adapter.pokemon_list_ViewHolder> {
@@ -26,6 +27,7 @@ public class pokemon_list_adapter extends RecyclerView.Adapter<pokemon_list_adap
     public interface OnItemClickListener {
         void onItemClick(int position);
     }
+
     public void setOnItemClickListener(OnItemClickListener listener) {
         mListener = listener;
     }
@@ -42,11 +44,12 @@ public class pokemon_list_adapter extends RecyclerView.Adapter<pokemon_list_adap
         View mItemView;
         TextView tv_pokemon_name;
         ImageView iv_pokemon;
+
         public pokemon_list_ViewHolder(@NonNull View itemView) {
             super(itemView);
-            tv_pokemon_name=itemView.findViewById(R.id.tv_pokemon_name);
-            iv_pokemon=itemView.findViewById(R.id.iv_pokemon);
-            mItemView=itemView.findViewById(R.id.pokemon_Linear_layout);
+            tv_pokemon_name = itemView.findViewById(R.id.tv_pokemon_name);
+            iv_pokemon = itemView.findViewById(R.id.iv_pokemon);
+            mItemView = itemView.findViewById(R.id.pokemon_Linear_layout);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -73,9 +76,14 @@ public class pokemon_list_adapter extends RecyclerView.Adapter<pokemon_list_adap
 
     @Override
     public void onBindViewHolder(@NonNull pokemon_list_ViewHolder holder, int position) {
-        Pokemon current_pokemon_name = pokemon.get(position);
-        holder.tv_pokemon_name.setText(current_pokemon_name.getShortName().toUpperCase());
-        Picasso.with(mContext).load(current_pokemon_name.getSprites().getFrontShine()).fit().centerInside().into(holder.iv_pokemon);
+        try {
+            Pokemon current_pokemon_name = pokemon.get(position);
+            holder.tv_pokemon_name.setText(current_pokemon_name.getShortName().toUpperCase());
+            Picasso.with(mContext).load(current_pokemon_name.getSprites().getFrontShine()).fit().centerInside().into(holder.iv_pokemon);
+        }
+        catch (Exception e){
+            Toast.makeText(mContext, "DONE.!!1", Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override

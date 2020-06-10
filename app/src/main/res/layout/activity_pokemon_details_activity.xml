@@ -7,41 +7,63 @@
     android:background="@color/bgFire"
     tools:context=".pokemon_details_activity">
 
-
+    <Button
+        android:id="@+id/share_button"
+        android:visibility="invisible"
+        android:onClick="share_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SHARE"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="20sp"
+        />
     <LinearLayout
-        android:layout_width="300sp"
-        android:layout_height="500sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
-        android:orientation="vertical"
-        android:layout_marginTop="170sp">
+        android:layout_marginTop="70sp"
+        android:orientation="vertical">
+
         <ImageView
             android:id="@+id/pokemon_detail_image"
-            android:layout_width="250sp"
-            android:layout_height="250sp"
+            android:layout_width="150sp"
+            android:layout_height="150sp"
             android:layout_gravity="center_horizontal"
             android:contentDescription="TODO"
             android:src="@mipmap/pokeball" />
-        <LinearLayout
-            android:background="@color/primary"
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_margin="20sp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-        <TextView
-            android:textColor="@color/stars"
-            android:id="@+id/pokemon_detail_name"
-            android:textSize="40sp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="70sp"
-            android:gravity="center"
-            android:text="pokemon_name" />
-            <TextView
-                android:id="@+id/pokemon_detail_moves"
-                android:textSize="35sp"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="abilities"/>
-        </LinearLayout>
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/primary"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/pokemon_detail_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_margin="20sp"
+                    android:gravity="center"
+                    android:text="pokemon_name"
+                    android:textColor="@color/stars"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/pokemon_detail_moves"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:padding="20sp"
+                    android:text="abilities"
+                    android:textColor="@color/stars"
+                    android:textSize="15sp" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
     </LinearLayout>
 </RelativeLayout>

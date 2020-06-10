@@ -6,7 +6,7 @@ android {
 
     defaultConfig {
         applicationId "com.yash.deltatask3"
-        minSdkVersion 28
+        minSdkVersion 27
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"
@@ -37,4 +37,5 @@ dependencies {
     implementation 'com.squareup.retrofit2:retrofit:2.6.2'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.1.0'
+    implementation 'com.android.support:design:28.0.0'
 }

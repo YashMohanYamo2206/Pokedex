@@ -4,6 +4,7 @@ import retrofit2.Call;
 import retrofit2.http.GET;
 import retrofit2.http.Path;
 import retrofit2.http.Query;
+import retrofit2.http.Url;
 
 public interface PokemonApiInterface {
 
@@ -24,4 +25,11 @@ public interface PokemonApiInterface {
 
     @GET("location")
     Call<location_not_region> getLocation(@Query("limit") int id);
+
+    @GET(".")
+    Call<evolution_chain> get_pokemon_species();
+
+    @GET
+    Call<Species> get_evolution_chain();
+
 }

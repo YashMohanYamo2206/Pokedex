@@ -18,10 +18,19 @@ public class PokemonApi {
         }
         return retrofit;
     }
-    public static Retrofit getApi_types(String type){
+    public static Retrofit getApi_custom(String type){
         if(retrofit == null){
             retrofit = new Retrofit.Builder()
-                    .baseUrl(BASE_URL_TYPES+"/"+type)
+                    .baseUrl(BASE_URL+"/"+type)
+                    .addConverterFactory(GsonConverterFactory.create())
+                    .build();
+        }
+        return retrofit;
+    }
+    public static Retrofit custom_url(String url){
+        if(retrofit == null){
+            retrofit = new Retrofit.Builder()
+                    .baseUrl(url)
                     .addConverterFactory(GsonConverterFactory.create())
                     .build();
         }

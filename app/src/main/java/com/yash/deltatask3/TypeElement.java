@@ -2,7 +2,7 @@ package com.yash.deltatask3;
 
 import com.google.gson.annotations.SerializedName;
 
-class TypeElement {
+public class TypeElement {
     @SerializedName("slot")
     public long Slot;
 

@@ -40,4 +40,9 @@ public class MainActivity extends AppCompatActivity {
         Intent intent = new Intent(MainActivity.this,items_list.class);
         startActivity(intent);
     }
+
+    public void favourite_pokemon(View view) {
+        Intent intent = new Intent(MainActivity.this,favourite_pokemon.class);
+        startActivity(intent);
+    }
 }

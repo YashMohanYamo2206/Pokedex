@@ -21,6 +21,10 @@ public class PokemonSprite {
     @SerializedName("back_shiny_female")
     private String backShineFemale;
 
+    @SerializedName("default")
+    private String item_img;
+
+
     public String getFrontDefault() {
         return frontDefault;
     }

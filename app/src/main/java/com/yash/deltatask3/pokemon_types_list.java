@@ -2,6 +2,8 @@ package com.yash.deltatask3;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -35,11 +37,13 @@ public class pokemon_types_list extends AppCompatActivity implements pokemon_typ
     private List<String> types_of_pokemon = new ArrayList<>();
     private int currentId = 1;
     private RequestQueue mRequestQueue;
+    TextView error;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_types_list);
+        error=findViewById(R.id.error_tv_types);
         mRecyclerView = findViewById(R.id.pokemon_types_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
@@ -72,8 +76,8 @@ public class pokemon_types_list extends AppCompatActivity implements pokemon_typ
                     }
                 }, new Response.ErrorListener() {
             @Override
-            public void onErrorResponse(VolleyError error) {
-
+            public void onErrorResponse(VolleyError er) {
+                error.setVisibility(View.VISIBLE);
             }
         });
         mRequestQueue.add(request);

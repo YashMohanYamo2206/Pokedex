@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_marginBottom="20sp"
     android:layout_centerHorizontal="true"
@@ -11,17 +12,20 @@
         android:layout_width="match_parent"
         android:layout_height="100sp">
         <ImageView
+            android:layout_marginStart="40sp"
+            android:layout_gravity="center_vertical"
             android:id="@+id/iv_item"
             android:src="@mipmap/pokeball"
-            android:layout_width="150sp"
-            android:layout_height="100sp"
-            android:contentDescription="TODO" />
+            android:layout_width="80sp"
+            android:layout_height="80sp"
+            tools:ignore="ContentDescription" />
 
         <TextView
+            android:layout_marginLeft="70sp"
             android:id="@+id/tv_item_name"
             android:layout_width="150sp"
             android:layout_height="50sp"
-            android:layout_gravity="center_vertical"
+            android:layout_gravity="center"
             android:fontFamily="@font/odin_rounded"
             android:gravity="center"
             android:text="item_name"

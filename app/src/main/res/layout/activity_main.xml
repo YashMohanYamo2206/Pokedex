@@ -83,5 +83,15 @@
             android:textColor="@color/bgFire" />
     </LinearLayout>
 
-
+    <Button
+        android:layout_centerHorizontal="true"
+        android:onClick="favourite_pokemon"
+        android:id="@+id/favourite_pokemon"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5sp"
+        android:background="@color/bgPoison"
+        android:text="favourite pokemons"
+        android:textColor="@color/bgRock" />
 </RelativeLayout>

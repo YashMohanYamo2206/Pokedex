@@ -9,33 +9,30 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pokemon {
-    @SerializedName("move")
+
+    @SerializedName("height")
+    public long Height ;
+
+    @SerializedName("moves")
     public List<Move> move;
-
-    public List<TypeElement> getTypes() {
-        return Types;
-    }
-
-    public void setTypes(List<TypeElement> types) {
-        Types = types;
-    }
-
-    public List<Move> getMove() {
-        return move;
-    }
-
-    public void setMove(List<Move> move) {
-        this.move = move;
-    }
 
     @SerializedName("types")
     public List<TypeElement> Types;
+
     @SerializedName("id")
     private int id;
+
     @SerializedName("forms")
     private List<PokemonForm> forms;
+
     @SerializedName("sprites")
     private PokemonSprite sprites;
+
+    @SerializedName("stats")
+    public List<Stat> Stats ;
+
+    @SerializedName("weight")
+    public long Weight ;
 
     public int getId() {
         return id;
@@ -83,4 +80,43 @@ public class Pokemon {
 
     }
 
+    public List<TypeElement> getTypes() {
+        return Types;
+    }
+
+    public void setTypes(List<TypeElement> types) {
+        Types = types;
+    }
+
+    public List<Move> getMove() {
+        return move;
+    }
+
+    public void setMove(List<Move> move) {
+        this.move = move;
+    }
+
+    public List<Stat> getStats() {
+        return Stats;
+    }
+
+    public void setStats(List<Stat> stats) {
+        Stats = stats;
+    }
+
+    public long getWeight() {
+        return Weight;
+    }
+
+    public void setWeight(long weight) {
+        Weight = weight;
+    }
+
+    public long getHeight() {
+        return Height;
+    }
+
+    public void setHeight(long height) {
+        Height = height;
+    }
 }

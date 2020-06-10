@@ -6,6 +6,22 @@
     android:layout_height="match_parent"
     android:background="@color/primary"
     tools:context=".pokemon_list">
+    <ImageView
+        android:layout_width="270dp"
+        android:layout_height="320dp"
+        android:layout_centerInParent="true"
+        android:src="@mipmap/pokeball"
+        android:contentDescription="TODO" />
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/error_tv_pokemon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="ERROR..!! TRY AGAIN or CHECK INTERNET"
+        android:fontFamily="@font/odin_rounded"
+        android:textSize="20sp"
+        android:textColor="@color/bgPoison"/>
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -28,5 +44,14 @@
         android:scrollbarThumbVertical="@android:color/holo_red_dark"
         android:scrollbars="vertical"
         android:verticalScrollbarPosition="left"/>
+    <ProgressBar
+        android:outlineAmbientShadowColor="#000"
+        android:outlineSpotShadowColor="#000"
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        />
 
 </RelativeLayout>

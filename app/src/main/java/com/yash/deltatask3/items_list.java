@@ -5,7 +5,10 @@ import android.os.Bundle;
 import android.os.Handler;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -29,22 +32,33 @@ public class items_list extends AppCompatActivity {
     Handler handler = new Handler();
     int item_id = 20;
     item items = new item();
-
+    ProgressBar progressBar ;
+    TextView error;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_items);
+        error=findViewById(R.id.error_tv_item);
+        progressBar=findViewById(R.id.loading);
         mRecyclerView = findViewById(R.id.item_recycler_view);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
+        mRecyclerView.setVisibility(View.INVISIBLE);
         addData(item_id);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                progressBar.setVisibility(View.GONE);
+                mRecyclerView.setVisibility(View.VISIBLE);
+            }
+        },2000);
         mRecyclerView.addOnScrollListener(new CustomOnScrollListener((LinearLayoutManager) mLayoutManager) {
             @Override
             public void onLoadMore(int page, int totalItemsCount, RecyclerView view) {
+                Snackbar.make(mRecyclerView, "Loading more items....", Snackbar.LENGTH_SHORT).show();
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Snackbar.make(mRecyclerView, "Loading more items....", Snackbar.LENGTH_SHORT).show();
                         if (item_id <= 954) {
                             item_id = item_id + 20;
                             addData(item_id);
@@ -101,7 +115,8 @@ public class items_list extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<item> call, Response<item> response) {
                     if (!response.isSuccessful()) {
-                        Toast.makeText(items_list.this, "kuch to gadbad hai", Toast.LENGTH_SHORT).show();
+                        error.setVisibility(View.VISIBLE);
+                        return;
                     }
                     items = response.body();
                     mAdapter = new items_list_adapter(items.getResults(), i);
@@ -110,7 +125,7 @@ public class items_list extends AppCompatActivity {
 
                 @Override
                 public void onFailure(Call<item> call, Throwable t) {
-
+                    error.setVisibility(View.VISIBLE);
                 }
             });
         } else {

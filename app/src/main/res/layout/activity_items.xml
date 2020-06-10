@@ -6,7 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".items_list">
-
+    <TextView
+        android:visibility="invisible"
+        android:id="@+id/error_tv_item"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:text="ERROR..!! TRY AGAIN or CHECK INTERNET"
+        android:fontFamily="@font/odin_rounded"
+        android:textSize="20sp"
+        android:textColor="@color/bgPoison"/>
     <EditText
         android:layout_marginLeft="10sp"
         android:layout_marginRight="10sp"
@@ -27,5 +36,12 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scrollbars="vertical"/>
+    <ProgressBar
+        android:id="@+id/loading"
+        android:layout_width="wrap_content"
+        android:indeterminate="true"
+        android:layout_centerInParent="true"
+        android:layout_height="wrap_content"
+        />
 
 </RelativeLayout>

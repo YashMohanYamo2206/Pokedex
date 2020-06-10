@@ -7,6 +7,8 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,11 +24,12 @@ public class location_list extends AppCompatActivity implements location_list_ad
     private RecyclerView.LayoutManager mLayoutManager;
     private List<Location> locations = new ArrayList<>();
     public static List<PokemonEntry> pokemon_locations ;
-
+    TextView error;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_location_list);
+        error=findViewById(R.id.error_tv);
         mAdapter = new location_list_adapter(locations);
         mRecyclerView = findViewById(R.id.location_recycler_view);
         mRecyclerView.setHasFixedSize(true);
@@ -45,7 +48,7 @@ public class location_list extends AppCompatActivity implements location_list_ad
                 @Override
                 public void onResponse(Call<Location> call, Response<Location> response) {
                     if (!response.isSuccessful()) {
-                        Toast.makeText(location_list.this, "hua kuch nhi", Toast.LENGTH_SHORT).show();
+                        error.setVisibility(View.VISIBLE);
                         return;
                     }
                     locations.add(response.body());
@@ -55,9 +58,7 @@ public class location_list extends AppCompatActivity implements location_list_ad
 
                 @Override
                 public void onFailure(Call<Location> call, Throwable t) {
-                    int k = id[finalI];
-                    Log.d("paise barbaad bc", t.getCause().toString());
-                    Toast.makeText(location_list.this, "paise barbaad bc", Toast.LENGTH_SHORT).show();
+                    error.setVisibility(View.VISIBLE);
                 }
             });
         }
