@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/home_nav"
+            android:title="HOME"/> </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/pokedex_nav"
+            android:title="PokéDex" />  </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/types_of_pokemon_nav"
+            android:title="TYPES OF POKEMON" />  </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/region_nav"
+            android:title="REGION" />  </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/items_nav"
+            android:title="ITEMS" />  </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/locations_nav"
+            android:title="LOCATIONS" />  </group>
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/favourite_nav"
+            android:title="FAVORITES" />  </group>
+
+</menu>

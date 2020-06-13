@@ -5,8 +5,8 @@ android {
     buildToolsVersion "29.0.3"
 
     defaultConfig {
-        applicationId "com.yash.deltatask3"
-        minSdkVersion 27
+        applicationId "com.yash.delta_task_3"
+        minSdkVersion 28
         targetSdkVersion 29
         versionCode 1
         versionName "1.0"

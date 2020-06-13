@@ -1,97 +1,45 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
-    tools:context=".MainActivity">
-
-    <ImageView
-        android:id="@+id/pokeball"
-        android:layout_width="150sp"
-        android:layout_height="150sp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="20sp"
-        android:src="@mipmap/pokeball" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/pokeball"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="15sp"
-        android:fontFamily="@font/odin_rounded"
-        android:text="pokémon"
-        android:textAllCaps="true"
-        android:textColor="@color/colorAccent"
-        android:textSize="25sp" />
+    android:fitsSystemWindows="true"
+    tools:context="com.yash.delta_task_3.MainActivity"
+    tools:openDrawer="start">
 
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="230sp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Button
-            android:id="@+id/pokedex"
-            android:layout_width="250sp"
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/icPsychic"
-            android:onClick="pokedex"
-            android:text="pokedex"
-            android:textColor="@color/bgFire" />
+            android:background="#00008577"
+            android:minHeight="?attr/actionBarSize"
+            android:pointerIcon="crosshair"
+            android:theme="?attr/actionBarTheme"
+            app:collapseIcon="@drawable/ic_header"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:navigationIcon="@drawable/ic_header" />
 
-        <Button
-            android:layout_width="250sp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50sp"
-            android:background="@color/icPsychic"
-            android:onClick="types_of_pokemon"
-            android:text="types of pokemon"
-            android:textColor="@color/bgFire" />
+        <FrameLayout
+            android:id="@+id/fragment_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
 
-        <Button
-            android:id="@+id/location"
-            android:layout_width="250sp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="50sp"
-            android:layout_marginBottom="50sp"
-            android:background="@color/icPsychic"
-            android:onClick="location"
-            android:text="region wise pokemons"
-            android:textColor="@color/bgFire" />
-
-        <Button
-            android:id="@+id/items"
-            android:layout_width="250sp"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="50sp"
-            android:background="@color/icPsychic"
-            android:onClick="items"
-            android:text="items"
-            android:textColor="@color/bgFire" />
-
-        <Button
-            android:id="@+id/not_region"
-            android:layout_width="250sp"
-            android:layout_height="wrap_content"
-            android:background="@color/icPsychic"
-            android:onClick="locations_not_regions"
-            android:text="locations"
-            android:textColor="@color/bgFire" />
     </LinearLayout>
-
-    <Button
-        android:layout_centerHorizontal="true"
-        android:onClick="favourite_pokemon"
-        android:id="@+id/favourite_pokemon"
-        android:layout_width="300sp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="5sp"
-        android:background="@color/bgPoison"
-        android:text="favourite pokemons"
-        android:textColor="@color/bgRock" />
-</RelativeLayout>
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/activity_drawer_header"
+        app:menu="@menu/main_menu" />
+</androidx.drawerlayout.widget.DrawerLayout>

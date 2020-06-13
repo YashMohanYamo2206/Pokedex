@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primary"
+    >
+    <TextView
+        android:gravity="center"
+        android:id="@+id/tv_pokedex"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15sp"
+        android:fontFamily="@font/odin_rounded"
+        android:text="pokémon"
+        android:textAllCaps="true"
+        android:textColor="@color/colorAccent"
+        android:textSize="45sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50sp"
+        android:layout_below="@+id/tv_pokedex"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/pokedex_btn"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:background="@color/icPsychic"
+            android:text="pokedex"
+            android:textColor="@color/bgFire" />
+
+        <Button
+            android:id="@+id/types_of_pokemon_btn"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:background="@color/icPsychic"
+            android:text="types of pokemon"
+            android:textColor="@color/bgFire" />
+
+        <Button
+            android:id="@+id/region_btn"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20sp"
+            android:layout_marginBottom="20sp"
+            android:background="@color/icPsychic"
+            android:text="region wise pokemons"
+            android:textColor="@color/bgFire" />
+
+        <Button
+            android:id="@+id/items_btn"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20sp"
+            android:background="@color/icPsychic"
+            android:text="items"
+            android:textColor="@color/bgFire" />
+
+        <Button
+            android:id="@+id/locations_btn"
+            android:layout_width="250sp"
+            android:layout_height="wrap_content"
+            android:background="@color/icPsychic"
+            android:text="locations"
+            android:textColor="@color/bgFire" />
+    </LinearLayout>
+
+    <Button
+        android:layout_centerHorizontal="true"
+        android:id="@+id/favourite_pokemon_btn"
+        android:layout_width="300sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50sp"
+        android:background="@color/bgPoison"
+        android:text="favourite pokemons"
+        android:textColor="@color/bgRock" />
+</RelativeLayout>

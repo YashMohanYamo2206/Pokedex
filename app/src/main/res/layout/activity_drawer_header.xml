@@ -1,16 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:background="@color/icPsychic"
+    android:background="@color/primary"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:layout_height="196dp">
+    android:gravity="bottom"
+    android:padding="20sp"
+    android:layout_height="220sp">
     <ImageView
         android:layout_marginTop="10sp"
        android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@mipmap/pokeball"
+        android:layout_height="100sp"
+        android:src="@drawable/ic_header"
         tools:ignore="ContentDescription" />
     <TextView
         android:textColor="@color/bgFire"

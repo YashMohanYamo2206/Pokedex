@@ -5,7 +5,7 @@
     android:background="@color/primary"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".items_list">
+    >
     <TextView
         android:visibility="invisible"
         android:id="@+id/error_tv_item"

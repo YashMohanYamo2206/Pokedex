@@ -11,6 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="100sp">
         <ImageView
+            android:transitionName="pic"
             android:id="@+id/iv_pokemon"
             android:src="@mipmap/pokeball"
             android:layout_width="150sp"

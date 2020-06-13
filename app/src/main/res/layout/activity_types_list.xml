@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primary"
-    tools:context=".pokemon_types_list">
+    >
     <TextView
         android:visibility="invisible"
         android:id="@+id/error_tv_types"
