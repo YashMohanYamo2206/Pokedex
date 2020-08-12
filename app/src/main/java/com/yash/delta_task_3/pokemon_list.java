@@ -254,7 +254,7 @@ public class pokemon_list extends Fragment implements pokemon_list_adapter.OnIte
             fragmentTransaction.replace(R.id.fragment_container, fragment2);
             fragmentTransaction.addToBackStack(null).commit();
         } else {
-            //isSearching = false;
+            //isSearching = true;
             Bundle bundle = new Bundle();
             List<Move> moves = searchname.get(position).getMove();
             String move = "";

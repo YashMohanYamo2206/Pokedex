@@ -121,7 +121,7 @@ public class pokemon_of_types_list extends Fragment implements pokemon_list_adap
     }
 
     private void serchaction(String s) {
-        List<Pokemon> searchname = new ArrayList<>();
+        searchname = new ArrayList<>();
         if (!s.equals("")) {
             isSearching = true;
             for (int i = 0; i < pokemons.size(); i++) {

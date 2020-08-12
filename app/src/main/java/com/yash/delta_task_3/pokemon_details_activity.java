@@ -1,5 +1,6 @@
 package com.yash.delta_task_3;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
@@ -51,6 +52,7 @@ public class pokemon_details_activity extends Fragment {
         return view;
     }
     
+    @SuppressLint("SetTextI18n")
     @Override
     public void onStart() {
         super.onStart();
